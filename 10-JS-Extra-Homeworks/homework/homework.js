@@ -79,7 +79,7 @@ function capicua(numero){
   }
   if(numero !== reverse) {
     return "No es capicua"
-  } else if(numero == reverse) {
+  } else{
     return "Es capicua"
   }
 }
