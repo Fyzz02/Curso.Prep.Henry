@@ -10,14 +10,31 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  result = Object.entries(objeto)
+  return result;
 }
 
 
 function numberOfCharacters(string) {
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
-  //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
+  //Ej: Recibe ---> "dasjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  contadorDeLetra = {}
+  textoConCharArr = [...string]
+  result = textoConCharArr.map(letter => contarLetra(letter, contadorDeLetra))
+
+  function contarLetra(letter, dict){
+    if(dict[letter] == undefined)
+    {
+        dict[letter] = 1
+    }
+    else
+    {
+        dict[letter]++
+    }
+}
+return contadorDeLetra;
 }
 
 
@@ -26,7 +43,18 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
-}
+    var mayuscula = '';
+    var minuscula = '';
+    for (i = 0; i<s.length; i++){ 
+       if(s[i] === s[i].toUpperCase()){ 
+            mayuscula = mayuscula + s[i]; 
+         }
+     else {
+            minuscula = minuscula + s[i];
+          } 
+     }       
+    return (mayuscula + minuscula) 
+  }
 
 
 function asAmirror(str) {
@@ -35,14 +63,27 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-} 
+  return str.split("").reverse().join("").split(" ").reverse().join(" ")
+}
 
 
 function capicua(numero){
   //Escribe una función, la cual recibe un número y determina si es o no capicúa.
-  //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
+  //La misma debe retornar: "Es capicua" si el número se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  numero = numero.toString();
+  let reverseNumber = "";
+  for(i = 0; i <= numero.length; i++) {
+    reverseNumber = reverseNumber + numero.charAt(numero.length - i);
+  }  
+  
+  if (numero == reverseNumber) {
+    return "Es capicua";
+  } else {
+    return "No es capicua"
+  }
+  
 }
 
 
