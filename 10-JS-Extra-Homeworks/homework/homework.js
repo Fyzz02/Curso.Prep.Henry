@@ -73,17 +73,15 @@ function capicua(numero){
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
   numero = numero.toString();
-  let reverseNumber = "";
-  for(i = 0; i <= numero.length; i++) {
-    reverseNumber = reverseNumber + numero.charAt(numero.length - i);
-  }  
-  
-  if (numero == reverseNumber) {
-    return "Es capicua";
-  } else {
-    return "No es capicua"
+  reverse = '';
+  for(var i = numero.length - 1; i >= 0; i--) {
+    reverse = reverse + numero[i]
   }
-  
+  if(numero !== reverse) {
+    return "No es capicua"
+  } else if(numero == reverse) {
+    return "Es capicua"
+  }
 }
 
 
