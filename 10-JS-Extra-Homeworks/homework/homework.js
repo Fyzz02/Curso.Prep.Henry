@@ -20,9 +20,9 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "dasjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
-  contadorDeLetra = {}
-  textoConCharArr = [...string]
-  result = textoConCharArr.map(letter => contarLetra(letter, contadorDeLetra))
+  contador = {}
+  arrayCaracteres = [...string]
+  result = arrayCaracteres.map(letter => contarLetra(letter, contador))
 
   function contarLetra(letter, dict){
     if(dict[letter] == undefined)
@@ -34,7 +34,7 @@ function numberOfCharacters(string) {
         dict[letter]++
     }
 }
-return contadorDeLetra;
+return contador;
 }
 
 
@@ -89,6 +89,8 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  stringSinLetras = cadena.replace('a', '').replace('b', '').replace('c', '')
+  return stringSinLetras;
 }
 
 
@@ -96,6 +98,16 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  arr.sort( function(a, b){
+    if(a.length > b.length) { //si A tiene que ir DESPUES de B
+      return 1;
+    }
+    if(a.length < b.length){ //si A tiene que ir ANTES que B
+      return -1;
+    }
+    return 0; //cuando son iguales
+  })
+  return arr;
 }
 
 
@@ -104,7 +116,10 @@ function buscoInterseccion(arreglo1, arreglo2){
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
-  //Escribe tu código aquí  
+  //Escribe tu código aquí
+  //value = todos los elementos de array1
+  const arrayInterseccionado = arreglo1.filter(value => arreglo2.includes(value));
+  return arrayInterseccionado;
 }
 
 
