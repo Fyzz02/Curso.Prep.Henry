@@ -1,0 +1,59 @@
+ una variable es una forma de tener el valor de algo guardado para así usarlo más
+tarde.
+
+ un string es un texto que se define por tener comillas (simples o dobles)
+
+una funcion tiene un nombre sobre lo que hace, tienen adentro un codigo para que
+despues al llamarla, haga lo que se le pide.
+  
+  las variables tienen valores guardados, estos valores son llamados ARGUMENTOS.
+    
+  la declaracion de retorno o "return" se usa como la única forma de que los datos
+escapen de una función.
+
+ la declaracion if es una forma para que la funcion sepa si algo es verdadero o falso 
+(true, false)
+
+ los valores booleanos true o false, son valores que se dan dependiendo del resultado
+de una función, true si es verdadero, false si no lo es.
+
+-----------------------------------------------------------------------------------------------------------------
+El bucle FOR sirve para hacer tareas repetitivas,
+devuelve lo que buscamos o se detiene despues de un tiempo.
+
+&&, ||, !
+
+Sirven para saber si entre 2 o mas cosas cumplen lo que se pide.
+
+&& : Sólo es verdad si los dos operandos son true
+
+|| : Solo es falso si los dos operandos son false, las demas ocasiones TRUE
+
+! : Operador de negación, va a devolver el valor opuesto a lo que se le haya pasado.
+
+--------------------------------------------------------------------------------------------------------------
+ 04
+array = es una lista de cosas (elementos), se definen usando brackets (corchetes)
+----------------------------------------------------------------------------------------------------------------
+ 05
+Objetos: Es una coleccion de cosas, que contienen informacion sobre ellas.
+(Coleccion de propiedades)
+
+Propiedad: es el conjunto de un nombre(key) y un valor(value).
+
+Metodo: es una función dentro de un objeto
+
+Bucle for in: un segundo tipo de bucle for, que recorre cada clave del objeto y termina
+cuando se hayan repetido todas las claves.
+
+Notacion de corchetes vs De punto: 2 formas diferentes de llegar a valores de claves.
+Utilizando corchetes [] Ej: persona["nombre"]["segundoName"]
+Puntos: persona.nombre.segundoName
+
+------------------------------------------------------------------------------------------------------
+06
+Un prototype es un objeto que tiene funciones y pueden ser diferentes, dependiendo del lugar en que la estemos llamando: 'String',
+'Array' u otro objeto.
+
+Constructor: o clase, son útiles para crear nuevos objetos que tengan valores en común
+ 
